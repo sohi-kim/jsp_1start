@@ -1,3 +1,5 @@
+<%@page import="vo.UserAccountVO"%>
+<%@page import="dao.UserAccountDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,9 +18,19 @@
 		String password = request.getParameter("password");
 		String birth = request.getParameter("birth");
 		String gender = request.getParameter("gender");
-		String email = request.getParameter("email");
-	
+		String email = request.getParameter("email");	
 // 참고 : 정수 타입으로 저장할 때에는 Integer.parseInt(request.getParameter("age"));
+
+// db 테이블에 위의 6개 값을 insert. -> dao 메소드 실행 -> 6개의 값을 UserAccountVO 객체로 생성
+		UserAccountDao dao = UserAccountDao.getInstance();
+		UserAccountVO vo 
+		= new UserAccountVO(userid,username,password,birth,gender,email);
+		int result = dao.insert(vo);
+		if (result==1){
+			out.print("<h2>회원 가입 완료!!</h2>");
+		}else {
+			out.print("<h2>회원 가입 실패!!</h2>");
+		}
 
 // out : jsp 의 내장객체.-> 브라우저에 출력 기능. System.out.println() 는 콘솔 출력.
 		out.print("<h2>데이터 잘 받았습니다.</h2>");
