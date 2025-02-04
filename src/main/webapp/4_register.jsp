@@ -26,8 +26,10 @@
   	<!-- 1. form 안의 입력 요소를 서버로 전송하려면, 파라미터 이름을 name 속성으로
   	     중복된 이름 없이 설정해야 합니다.name 속성값은 db테이블 컬럼명과 자바클래스 변수명과 
   	     같도록 하는 것이 코드 작성에 편합니다.
-  	     2. 데이터 '저장'을 하는 form 의 동작방식(method속성)을 post
-  	        데이터 '검색(조회)'                             get(기본값) : 입력값url 에 표시
+  	     2. 데이터 '저장'을 하는 form 의 동작방식(method속성)을 post : 파라미터 인코딩 필요
+  	        데이터 '검색(조회)'                          get(기본값) : 입력값url 에 표시
+  	        											* URL은 자동으로 UTF-8인코딩		
+  	     3. 입력요소 값은 action 속성에 설정된 url 로 전송이 됩니다.   
   	 -->
     <div class="input-group mb-3">
 	  <span class="input-group-text w90" id="basic-addon1">성 명</span>
