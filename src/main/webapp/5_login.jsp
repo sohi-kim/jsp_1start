@@ -8,22 +8,24 @@
     <title>5_login.jsp</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/form.css"/>
-    <script type="text/javascript" src="js/longin.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
   </head>
   <body>
 	  <div class="container regForm">  
 	  	<h2>로그인</h2>
 	  	<hr/>
-	  	<form action="5_loginProc.jsp">
+	  	<form action="5_loginProc.jsp" method="post" onsubmit="return checkValues()">
 	  		<div class="form-floating mb-3">
-			  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+			  <input type="text" class="form-control" id="floatingInput" placeholder="사용자 아이디 입력하세요.">
+			  <span></span>  <!-- 필수 입력 입니다. 메시지 출력  -->
 			  <label for="floatingInput">사용자 아이디</label>
 			</div>
 			<div class="form-floating">
-			  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+			  <input type="password" class="form-control" id="floatingPassword" placeholder="패스워드 입력하세요.">
+			  <span></span>
 			  <label for="floatingPassword">패스워드</label>
 			</div>
-			<div>
+			<div class="centerDiv">
 				<button type="button" class="btn btn-secondary">홈</button>
 				<button class="btn btn-dark">로그인</button>
 				<!-- form 안에서는 type="submit" 생략 가능 -->
