@@ -10,10 +10,13 @@ function checkValues(){
 	= document.querySelectorAll(' div.input-group > input  ,div.input-group > select ');
 	console.log(test)   // 브라우저 개발자도구 콘솔에서 확인
 	
+	// test 결과를 역순으로 정렬
+	const reverse = Array.from(test).reverse();
+	
 	// 반복 메소드 forEach 활용 - 하나씩 가져온 요소는 element 변수에 저장
-	test.forEach( element => {
+	reverse.forEach( element => {
 		element.nextElementSibling.innerHTML=''
-		if(element.value === ''){
+		if(element.value === '' && element.name != 'email'){
 			//element (입력요소)의 다음 위치 형제 가져오기
 			element.nextElementSibling.innerHTML='필수 입력 입니다.'
 			element.focus()

@@ -7,21 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>4_register.jsp</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style type="text/css">
-    .regForm {
-    	max-width: 500px;
-    	margin:50px auto ;
-    }
-    .w90{
-    	width: 90px;
-    }
-    /* > 기호는 자식, + 기호는 형제 선택자 , 기호는 목록 나열 */
-    div.input-group > input + span ,div.input-group > select + span {
-    	color:red;
-    	font-size: 0.7rem;
-    	padding-left: 15px;
-    }
-    </style>
+    <link rel="stylesheet" href="css/form.css"/>
     <script type="text/javascript" src="js/check3.js"></script>
   </head>
   <body>

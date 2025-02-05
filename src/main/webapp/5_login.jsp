@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>5_login.jsp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/form.css"/>
+    <script type="text/javascript" src="js/longin.js"></script>
+  </head>
+  <body>
+	  <div class="container regForm">  
+	  	<h2>로그인</h2>
+	  	<hr/>
+	  	<form action="5_loginProc.jsp">
+	  		<div class="form-floating mb-3">
+			  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+			  <label for="floatingInput">사용자 아이디</label>
+			</div>
+			<div class="form-floating">
+			  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+			  <label for="floatingPassword">패스워드</label>
+			</div>
+			<div>
+				<button type="button" class="btn btn-secondary">홈</button>
+				<button class="btn btn-dark">로그인</button>
+				<!-- form 안에서는 type="submit" 생략 가능 -->
+			</div>
+	  	</form>
+		<hr/>
+	   </div> 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

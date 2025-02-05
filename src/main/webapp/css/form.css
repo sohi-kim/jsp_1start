@@ -1,0 +1,16 @@
+@charset "UTF-8";
+.regForm {
+    	max-width: 500px;
+    	margin:50px auto ;
+    }
+    
+.w90{
+	width: 90px;
+}
+
+/* > 기호는 자식, + 기호는 형제 선택자 , 기호는 목록 나열 */
+div.input-group > input + span ,div.input-group > select + span {
+	color:red;
+	font-size: 0.7rem;
+	padding-left: 15px;
+}
