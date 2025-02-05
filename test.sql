@@ -15,3 +15,8 @@ create table tbl_user_account (
 --         ㄴ 매개변수 2개 , 결과 행 0~1개 행
 select * from TBL_USER_ACCOUNT
 where userid='asdf' and password='2222';
+
+
+
+
+
