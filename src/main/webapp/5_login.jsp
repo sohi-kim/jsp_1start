@@ -16,23 +16,34 @@
 	  	<hr/>
 	  	<form action="5_loginProc.jsp" method="post" onsubmit="return checkValues()">
 	  		<div class="form-floating mb-3">
-			  <input type="text" class="form-control" id="floatingInput" placeholder="사용자 아이디 입력하세요.">
+			  <input type="text" class="form-control" name="userid" 
+			  		id="floatingInput" placeholder="사용자 아이디 입력하세요.">
 			  <span></span>  <!-- 필수 입력 입니다. 메시지 출력  -->
 			  <label for="floatingInput">사용자 아이디</label>
 			</div>
 			<div class="form-floating">
-			  <input type="password" class="form-control" id="floatingPassword" placeholder="패스워드 입력하세요.">
+			  <input type="password" class="form-control" name="password" 
+			  		id="floatingPassword" placeholder="패스워드 입력하세요.">
 			  <span></span>
 			  <label for="floatingPassword">패스워드</label>
 			</div>
+			<div id="fail"></div>
 			<div class="centerDiv">
-				<button type="button" class="btn btn-secondary">홈</button>
+				<button type="button" class="btn btn-secondary" 
+						onclick="location.href='index.html'">홈</button>
 				<button class="btn btn-dark">로그인</button>
 				<!-- form 안에서는 type="submit" 생략 가능 -->
 			</div>
 	  	</form>
 		<hr/>
 	   </div> 
+   <script type="text/javascript">
+   		const fail = '${param.fail}'   // ????
+   		console.log(fail)
+   		if(fail==='y')
+   			document.getElementById('fail').innerHTML 
+   			='사용자 아이디 또는 패스워드 정보가 올바르지 않습니다.'
+   </script>	   
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
