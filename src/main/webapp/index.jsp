@@ -26,11 +26,11 @@
 		<%
 			if(vo!=null) {   // 로그인 상태가 아니면 vo 는 null. getXXX 메소드 실행할 때 오류 처리
 		%>
-			 	<li>로그인 사용자</li>
+			 	<li> 로그인 사용자</li>
 				<li> 아이디 : <%= vo.getUserid() %></li>		
 				<li> 이름 : <%= vo.getUsername() %></li>		
 				<li> 이메일 : <%= vo.getEmail() %></li>		
-				<li><a href="#">로그아웃</a></li>  <!-- 로그인 상태일 때만 나오는 메뉴 -->
+				<li><a href="5_logout.jsp">로그아웃</a></li>  <!-- 로그인 상태일 때만 나오는 메뉴 -->
 		<%
 			}else {
 		%>		
