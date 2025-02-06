@@ -23,21 +23,22 @@
 	%>
 	<h3>1start 프로젝트의 메뉴입니다.</h3>
 	<ul>
-		<li><a href="4_register.jsp">회원 가입</a></li> <!-- 로그인 상태가 아닐때 나오는 메뉴 -->
-		<li><a href="5_login.jsp">로그인</a></li> <!-- 로그인 상태가 아닐때 나오는 메뉴 -->
-		<li><a href="#">로그아웃</a></li>  <!-- 로그인 상태일 때만 나오는 메뉴 -->
+		<%
+			if(vo!=null) {   // 로그인 상태가 아니면 vo 는 null. getXXX 메소드 실행할 때 오류 처리
+		%>
+			 	<li>로그인 사용자</li>
+				<li> 아이디 : <%= vo.getUserid() %></li>		
+				<li> 이름 : <%= vo.getUsername() %></li>		
+				<li> 이메일 : <%= vo.getEmail() %></li>		
+				<li><a href="#">로그아웃</a></li>  <!-- 로그인 상태일 때만 나오는 메뉴 -->
+		<%
+			}else {
+		%>		
+				<li><a href="4_register.jsp">회원 가입</a></li> <!-- 로그인 상태가 아닐때 나오는 메뉴 -->
+				<li><a href="5_login.jsp">로그인</a></li> <!-- 로그인 상태가 아닐때 나오는 메뉴 -->
+		<%
+			}
+		%>
 	</ul>
-	<%
-		if(vo!=null) {   // 로그인 상태가 아니면 vo 는 null. getXXX 메소드 실행할 때 오류 처리
-	%>
-	<h2>로그인 사용자</h2>
-		<ul>
-			<li> 아이디 : <%= vo.getUserid() %></li>		
-			<li> 이름 : <%= vo.getUsername() %></li>		
-			<li> 이메일 : <%= vo.getEmail() %></li>		
-	</ul>
-	<%
-		}
-	%>
 </body>
 </html>
